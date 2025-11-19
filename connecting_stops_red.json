@@ -1,0 +1,2727 @@
+{
+  "data": [
+    {
+      "attributes": {
+        "address": "Alewife Brook Pkwy and Cambridge Park Dr, Cambridge, MA 02140",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.39583,
+        "location_type": 1,
+        "longitude": -71.141287,
+        "municipality": "Cambridge",
+        "name": "Alewife",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-alfcl",
+      "links": {
+        "self": "/stops/place-alfcl"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": []
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-alfcl"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "College Ave and Elm St, Somerville, MA",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.39674,
+        "location_type": 1,
+        "longitude": -71.121815,
+        "municipality": "Somerville",
+        "name": "Davis",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-davis",
+      "links": {
+        "self": "/stops/place-davis"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "5015",
+              "type": "stop"
+            },
+            {
+              "id": "2581",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-davis"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "1899 Massachusetts Ave, Cambridge, MA 02140",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.3884,
+        "location_type": 1,
+        "longitude": -71.119149,
+        "municipality": "Cambridge",
+        "name": "Porter",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-portr",
+      "links": {
+        "self": "/stops/place-portr"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "2430",
+              "type": "stop"
+            },
+            {
+              "id": "2460",
+              "type": "stop"
+            },
+            {
+              "id": "12301",
+              "type": "stop"
+            },
+            {
+              "id": "23151",
+              "type": "stop"
+            },
+            {
+              "id": "9070065",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-portr"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "CR-zone-1A",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "1400 Massachusetts Ave, Cambridge, MA",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.373362,
+        "location_type": 1,
+        "longitude": -71.118956,
+        "municipality": "Cambridge",
+        "name": "Harvard",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-harsq",
+      "links": {
+        "self": "/stops/place-harsq"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "9070072",
+              "type": "stop"
+            },
+            {
+              "id": "110",
+              "type": "stop"
+            },
+            {
+              "id": "22549",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-harsq"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "Massachusetts Ave and Prospect St, Cambridge, MA 02139",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.365486,
+        "location_type": 1,
+        "longitude": -71.103802,
+        "municipality": "Cambridge",
+        "name": "Central",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-cntsq",
+      "links": {
+        "self": "/stops/place-cntsq"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "102",
+              "type": "stop"
+            },
+            {
+              "id": "1060",
+              "type": "stop"
+            },
+            {
+              "id": "1123",
+              "type": "stop"
+            },
+            {
+              "id": "72",
+              "type": "stop"
+            },
+            {
+              "id": "2443",
+              "type": "stop"
+            },
+            {
+              "id": "1059",
+              "type": "stop"
+            },
+            {
+              "id": "9070070",
+              "type": "stop"
+            },
+            {
+              "id": "2755",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-cntsq"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "300 Main St, Cambridge, MA 02142",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.362491,
+        "location_type": 1,
+        "longitude": -71.086176,
+        "municipality": "Cambridge",
+        "name": "Kendall/MIT",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-knncl",
+      "links": {
+        "self": "/stops/place-knncl"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "2231",
+              "type": "stop"
+            },
+            {
+              "id": "9170071",
+              "type": "stop"
+            },
+            {
+              "id": "9070071",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-knncl"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "Cambridge St and Charles St, Boston, MA",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.361166,
+        "location_type": 1,
+        "longitude": -71.070628,
+        "municipality": "Boston",
+        "name": "Charles/MGH",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-chmnl",
+      "links": {
+        "self": "/stops/place-chmnl"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "9070074",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-chmnl"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "Tremont St and Winter St, Boston, MA 02108",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.356395,
+        "location_type": 1,
+        "longitude": -71.062424,
+        "municipality": "Boston",
+        "name": "Park Street",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-pktrm",
+      "links": {
+        "self": "/stops/place-pktrm"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "9070076",
+              "type": "stop"
+            },
+            {
+              "id": "9170076",
+              "type": "stop"
+            },
+            {
+              "id": "10000",
+              "type": "stop"
+            },
+            {
+              "id": "49001",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-pktrm"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "Washington St and Summer St, Boston, MA",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.355518,
+        "location_type": 1,
+        "longitude": -71.060225,
+        "municipality": "Boston",
+        "name": "Downtown Crossing",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-dwnxg",
+      "links": {
+        "self": "/stops/place-dwnxg"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "9070080",
+              "type": "stop"
+            },
+            {
+              "id": "16538",
+              "type": "stop"
+            },
+            {
+              "id": "49001",
+              "type": "stop"
+            },
+            {
+              "id": "16535",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-dwnxg"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "700 Atlantic Ave, Boston, MA 02110",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.352271,
+        "location_type": 1,
+        "longitude": -71.055242,
+        "municipality": "Boston",
+        "name": "South Station",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-sstat",
+      "links": {
+        "self": "/stops/place-sstat"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "6564",
+              "type": "stop"
+            },
+            {
+              "id": "892",
+              "type": "stop"
+            },
+            {
+              "id": "6538",
+              "type": "stop"
+            },
+            {
+              "id": "9070079",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-sstat"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "CR-zone-1A",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "Dorchester Ave and Broadway, Boston, MA",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.342622,
+        "location_type": 1,
+        "longitude": -71.056967,
+        "municipality": "Boston",
+        "name": "Broadway",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-brdwy",
+      "links": {
+        "self": "/stops/place-brdwy"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "151",
+              "type": "stop"
+            },
+            {
+              "id": "150",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-brdwy"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "Dorchester Ave and Southhampton St, South Boston, MA 02127",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.330154,
+        "location_type": 1,
+        "longitude": -71.057655,
+        "municipality": "Boston",
+        "name": "Andrew",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-andrw",
+      "links": {
+        "self": "/stops/place-andrw"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "9070083",
+              "type": "stop"
+            },
+            {
+              "id": "9170084",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-andrw"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "599 Old Colony Ave, Boston, MA 02127-3805",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.320685,
+        "location_type": 1,
+        "longitude": -71.052391,
+        "municipality": "Boston",
+        "name": "JFK/UMass",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-jfk",
+      "links": {
+        "self": "/stops/place-jfk"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": []
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-jfk"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "CR-zone-1A",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "125 Savin Hill Ave, Dorchester, MA 02124",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.31129,
+        "location_type": 1,
+        "longitude": -71.053331,
+        "municipality": "Boston",
+        "name": "Savin Hill",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-shmnl",
+      "links": {
+        "self": "/stops/place-shmnl"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": []
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-shmnl"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "50 Freeman St, Dorchester, MA 02122",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.300093,
+        "location_type": 1,
+        "longitude": -71.061667,
+        "municipality": "Boston",
+        "name": "Fields Corner",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-fldcr",
+      "links": {
+        "self": "/stops/place-fldcr"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": []
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-fldcr"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "Dayton St and Clementine Park, Dorchester, MA 02124",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.293126,
+        "location_type": 1,
+        "longitude": -71.065738,
+        "municipality": "Boston",
+        "name": "Shawmut",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-smmnl",
+      "links": {
+        "self": "/stops/place-smmnl"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": []
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-smmnl"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "Dorchester Ave and Ashmont St, Boston, MA 02124",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.28452,
+        "location_type": 1,
+        "longitude": -71.063777,
+        "municipality": "Boston",
+        "name": "Ashmont",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-asmnl",
+      "links": {
+        "self": "/stops/place-asmnl"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": []
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-asmnl"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "Hancock St and Hunt St, Quincy, MA 02171",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.275275,
+        "location_type": 1,
+        "longitude": -71.029583,
+        "municipality": "Quincy",
+        "name": "North Quincy",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-nqncy",
+      "links": {
+        "self": "/stops/place-nqncy"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "9370024",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-nqncy"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "90 Woodbine St, Quincy, MA 02171",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.266514,
+        "location_type": 1,
+        "longitude": -71.020337,
+        "municipality": "Quincy",
+        "name": "Wollaston",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-wlsta",
+      "links": {
+        "self": "/stops/place-wlsta"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "9170099",
+              "type": "stop"
+            },
+            {
+              "id": "9170100",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-wlsta"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "175 Thomas E Burgin Pkwy, Quincy, MA 02169",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.251809,
+        "location_type": 1,
+        "longitude": -71.005409,
+        "municipality": "Quincy",
+        "name": "Quincy Center",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-qnctr",
+      "links": {
+        "self": "/stops/place-qnctr"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "32000",
+              "type": "stop"
+            },
+            {
+              "id": "9370048",
+              "type": "stop"
+            },
+            {
+              "id": "9070101",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-qnctr"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "CR-zone-1",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "Burgin Pkwy and Centre St, Quincy, MA 02169",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.233391,
+        "location_type": 1,
+        "longitude": -71.007153,
+        "municipality": "Quincy",
+        "name": "Quincy Adams",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-qamnl",
+      "links": {
+        "self": "/stops/place-qamnl"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": [
+            {
+              "id": "3852",
+              "type": "stop"
+            },
+            {
+              "id": "3946",
+              "type": "stop"
+            }
+          ]
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-qamnl"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": "197 Ivory St, Braintree, MA 02184",
+        "at_street": null,
+        "description": null,
+        "latitude": 42.207854,
+        "location_type": 1,
+        "longitude": -71.001138,
+        "municipality": "Braintree",
+        "name": "Braintree",
+        "on_street": null,
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": null,
+        "wheelchair_boarding": 1
+      },
+      "id": "place-brntn",
+      "links": {
+        "self": "/stops/place-brntn"
+      },
+      "relationships": {
+        "connecting_stops": {
+          "data": []
+        },
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=place-brntn"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "CR-zone-2",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    }
+  ],
+  "included": [
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Winter Street",
+        "description": "Park Street - Red Line Shuttle - Tremont St @ Winter St",
+        "latitude": 42.356164,
+        "location_type": 0,
+        "longitude": -71.062487,
+        "municipality": "Boston",
+        "name": "Park Street - Tremont St @ Winter St",
+        "on_street": "Tremont Street",
+        "platform_code": null,
+        "platform_name": "Red Line Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9070076",
+      "links": {
+        "self": "/stops/9070076"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9070076"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "White Street",
+        "description": null,
+        "latitude": 42.388424,
+        "location_type": 0,
+        "longitude": -71.118904,
+        "municipality": "Cambridge",
+        "name": "Somerville Ave @ Massachusetts Ave",
+        "on_street": "Somerville Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "2430",
+      "links": {
+        "self": "/stops/2430"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=2430"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "White Street",
+        "description": null,
+        "latitude": 42.388534,
+        "location_type": 0,
+        "longitude": -71.118917,
+        "municipality": "Cambridge",
+        "name": "Somerville Ave @ White St (Porter Sq)",
+        "on_street": "Somerville Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "2460",
+      "links": {
+        "self": "/stops/2460"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=2460"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Bishop R Allen Drive",
+        "description": null,
+        "latitude": 42.366433,
+        "location_type": 0,
+        "longitude": -71.103138,
+        "municipality": "Cambridge",
+        "name": "Prospect St @ Bishop Allen Dr",
+        "on_street": "Prospect Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "2443",
+      "links": {
+        "self": "/stops/2443"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=2443"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Busway",
+        "description": null,
+        "latitude": 42.396803,
+        "location_type": 0,
+        "longitude": -71.122171,
+        "municipality": "Somerville",
+        "name": "College Ave @ Highland Ave",
+        "on_street": "College Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "5015",
+      "links": {
+        "self": "/stops/5015"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=5015"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Dexter Street",
+        "description": "Andrew - Red Line Ashmont/Braintree Shuttle - Dorchester Ave @ Dexter St",
+        "latitude": 42.330445,
+        "location_type": 0,
+        "longitude": -71.057042,
+        "municipality": "Boston",
+        "name": "Andrew - Dorchester Ave @ Dexter St",
+        "on_street": "Dorchester Avenue",
+        "platform_code": null,
+        "platform_name": "Ashmont/Braintree Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9070083",
+      "links": {
+        "self": "/stops/9070083"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9070083"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Dock Street",
+        "description": "Kendall/MIT - Red Line Shuttle - Main St opp Dock St",
+        "latitude": 42.362584,
+        "location_type": 0,
+        "longitude": -71.087137,
+        "municipality": "Cambridge",
+        "name": "Kendall/MIT - Main St opp Dock St",
+        "on_street": "Main Street",
+        "platform_code": null,
+        "platform_name": "Red Line Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9070071",
+      "links": {
+        "self": "/stops/9070071"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9070071"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Hayward Street",
+        "description": "Kendall/MIT - Red Line Ashmont/Braintree Shuttle - Main St @ Hayward St",
+        "latitude": 42.362309,
+        "location_type": 0,
+        "longitude": -71.085583,
+        "municipality": "Cambridge",
+        "name": "Kendall/MIT - Main St @ Hayward St",
+        "on_street": "Main Street",
+        "platform_code": null,
+        "platform_name": "Ashmont/Braintree Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9170071",
+      "links": {
+        "self": "/stops/9170071"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9170071"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Tremont Street",
+        "description": "Temple Pl @ Washington St - Silver Line - SL5 Nubian",
+        "latitude": 42.355385,
+        "location_type": 0,
+        "longitude": -71.062211,
+        "municipality": "Boston",
+        "name": "Temple Pl @ Washington St",
+        "on_street": "Temple Place",
+        "platform_code": null,
+        "platform_name": "Nubian",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "49001",
+      "links": {
+        "self": "/stops/49001"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=49001"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": null,
+        "description": null,
+        "latitude": 42.362498,
+        "location_type": 0,
+        "longitude": -71.085841,
+        "municipality": "Cambridge",
+        "name": "Main St @ Kendall Station - Red Line",
+        "on_street": "Main Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "2231",
+      "links": {
+        "self": "/stops/2231"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=2231"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Hamilton Place",
+        "description": "Park Street - Red Line Shuttle - Tremont St opp Hamilton Pl",
+        "latitude": 42.356874,
+        "location_type": 0,
+        "longitude": -71.061699,
+        "municipality": "Boston",
+        "name": "Park Street - Tremont St opp Hamilton Pl",
+        "on_street": "Tremont Street",
+        "platform_code": null,
+        "platform_name": "Red Line Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9170076",
+      "links": {
+        "self": "/stops/9170076"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9170076"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Palmer Street",
+        "description": "Harvard - Red Line Shuttle - Brattle St @ Palmer St",
+        "latitude": 42.373396,
+        "location_type": 0,
+        "longitude": -71.1202,
+        "municipality": "Cambridge",
+        "name": "Harvard - Brattle St @ Palmer St",
+        "on_street": "Brattle Street",
+        "platform_code": null,
+        "platform_name": "Red Line Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9070072",
+      "links": {
+        "self": "/stops/9070072"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9070072"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Leeds Street",
+        "description": "Andrew - Red Line Alewife Shuttle - Dorchester Ave @ Leeds St",
+        "latitude": 42.330321,
+        "location_type": 0,
+        "longitude": -71.056873,
+        "municipality": "Boston",
+        "name": "Andrew - Dorchester Ave @ Leeds St",
+        "on_street": "Dorchester Avenue",
+        "platform_code": null,
+        "platform_name": "Alewife Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9170084",
+      "links": {
+        "self": "/stops/9170084"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9170084"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Verchild Street",
+        "description": null,
+        "latitude": 42.233513,
+        "location_type": 0,
+        "longitude": -71.006101,
+        "municipality": "Quincy",
+        "name": "Independence Ave opp Verchild St",
+        "on_street": "Independence Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "3852",
+      "links": {
+        "self": "/stops/3852"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=3852"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Summer Street",
+        "description": null,
+        "latitude": 42.354243,
+        "location_type": 0,
+        "longitude": -71.058557,
+        "municipality": "Boston",
+        "name": "Otis St @ Summer St",
+        "on_street": "Otis Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "16535",
+      "links": {
+        "self": "/stops/16535"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=16535"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "ExpressBus-Downtown",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Temple Place",
+        "description": null,
+        "latitude": 42.355692,
+        "location_type": 0,
+        "longitude": -71.062911,
+        "municipality": "Boston",
+        "name": "Tremont St opp Temple Pl",
+        "on_street": "Tremont Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "10000",
+      "links": {
+        "self": "/stops/10000"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=10000"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Essex Street",
+        "description": null,
+        "latitude": 42.364915,
+        "location_type": 0,
+        "longitude": -71.103074,
+        "municipality": "Cambridge",
+        "name": "Massachusetts Ave @ Pearl St",
+        "on_street": "Massachusetts Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "72",
+      "links": {
+        "self": "/stops/72"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=72"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "John F. Fitzgerald Surface Road",
+        "description": "South Station - Red Line Ashmont/Braintree Shuttle - Summer St @ Surface Rd",
+        "latitude": 42.353003,
+        "location_type": 0,
+        "longitude": -71.05661,
+        "municipality": "Boston",
+        "name": "South Station - Summer St @ Surface Rd",
+        "on_street": "Summer Street",
+        "platform_code": null,
+        "platform_name": "Ashmont/Braintree Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9070079",
+      "links": {
+        "self": "/stops/9070079"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9070079"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": null,
+        "description": "North Quincy - Red Line Alewife Shuttle - Hancock Street Garage",
+        "latitude": 42.2767,
+        "location_type": 0,
+        "longitude": -71.03086,
+        "municipality": "Quincy",
+        "name": "North Quincy - Hancock Street Garage",
+        "on_street": "Hancock Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9370024",
+      "links": {
+        "self": "/stops/9370024"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9370024"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": null,
+        "description": "Quincy Center - Red Line Braintree Shuttle - 1259 Hancock St",
+        "latitude": 42.251786,
+        "location_type": 0,
+        "longitude": -71.003876,
+        "municipality": "Quincy",
+        "name": "Quincy Center - 1259 Hancock St",
+        "on_street": "Hancock Street",
+        "platform_code": null,
+        "platform_name": "Braintree Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9070101",
+      "links": {
+        "self": "/stops/9070101"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9070101"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Magazine Street",
+        "description": null,
+        "latitude": 42.364935,
+        "location_type": 0,
+        "longitude": -71.104405,
+        "municipality": "Cambridge",
+        "name": "Green St @ Magazine St",
+        "on_street": "Green Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "1123",
+      "links": {
+        "self": "/stops/1123"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=1123"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Greenbaum Street",
+        "description": null,
+        "latitude": 42.342556,
+        "location_type": 0,
+        "longitude": -71.057015,
+        "municipality": "Boston",
+        "name": "Broadway Station - Red Line",
+        "on_street": "Dorchester Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "150",
+      "links": {
+        "self": "/stops/150"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=150"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Saville Street",
+        "description": null,
+        "latitude": 42.252035,
+        "location_type": 0,
+        "longitude": -71.00588,
+        "municipality": "Quincy",
+        "name": "Burgin Pkwy @ Quincy Center Station",
+        "on_street": "Honorable Thomas S Burgin Parkway",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "32000",
+      "links": {
+        "self": "/stops/32000"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=32000"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Green Street",
+        "description": null,
+        "latitude": 42.365114,
+        "location_type": 0,
+        "longitude": -71.104311,
+        "municipality": "Cambridge",
+        "name": "Magazine St @ Green St",
+        "on_street": "Magazine Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "1060",
+      "links": {
+        "self": "/stops/1060"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=1060"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Essex Street",
+        "description": null,
+        "latitude": 42.365291,
+        "location_type": 0,
+        "longitude": -71.103404,
+        "municipality": "Cambridge",
+        "name": "Massachusetts Ave @ Prospect St",
+        "on_street": "Massachusetts Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "102",
+      "links": {
+        "self": "/stops/102"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=102"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Mount Vernon Street",
+        "description": "Porter - Red Line Ashmont/Braintree Shuttle - Massachusetts Avenue @ Mount Vernon St",
+        "latitude": 42.38758,
+        "location_type": 0,
+        "longitude": -71.11934,
+        "municipality": "Cambridge",
+        "name": "Porter - Massachusetts Avenue @ Mount Vernon St",
+        "on_street": "Massachusetts Avenue",
+        "platform_code": null,
+        "platform_name": "Ashmont/Braintree Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9070065",
+      "links": {
+        "self": "/stops/9070065"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9070065"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Highland Avenue",
+        "description": null,
+        "latitude": 42.39693,
+        "location_type": 0,
+        "longitude": -71.122971,
+        "municipality": "Somerville",
+        "name": "Holland St @ Dover St",
+        "on_street": "Holland Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "2581",
+      "links": {
+        "self": "/stops/2581"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=2581"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Pearl Street",
+        "description": "Central - Red Line Alewife Shuttle - Massachusetts Ave opp Pearl St",
+        "latitude": 42.36472,
+        "location_type": 0,
+        "longitude": -71.10237,
+        "municipality": "Cambridge",
+        "name": "Central - Massachusetts Ave opp Pearl St",
+        "on_street": "Massachusetts Avenue",
+        "platform_code": null,
+        "platform_name": "Alewife Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9070070",
+      "links": {
+        "self": "/stops/9070070"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9070070"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Upland Road",
+        "description": null,
+        "latitude": 42.388034,
+        "location_type": 0,
+        "longitude": -71.119253,
+        "municipality": "Cambridge",
+        "name": "Massachusetts Ave @ Porter Red Line Sta",
+        "on_street": "Massachusetts Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "23151",
+      "links": {
+        "self": "/stops/23151"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=23151"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Brook Street",
+        "description": "Wollaston - Red Line Braintree Shuttle - Newport Ave @ Brook St",
+        "latitude": 42.26656,
+        "location_type": 0,
+        "longitude": -71.020832,
+        "municipality": "Quincy",
+        "name": "Wollaston - Newport Ave @ Brook St",
+        "on_street": "Newport Avenue",
+        "platform_code": null,
+        "platform_name": "Braintree Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9170099",
+      "links": {
+        "self": "/stops/9170099"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9170099"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Upland Road",
+        "description": null,
+        "latitude": 42.388229,
+        "location_type": 0,
+        "longitude": -71.119545,
+        "municipality": "Cambridge",
+        "name": "Massachusetts Ave @ Upland Rd",
+        "on_street": "Massachusetts Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "12301",
+      "links": {
+        "self": "/stops/12301"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=12301"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Atlantic Avenue",
+        "description": null,
+        "latitude": 42.352253,
+        "location_type": 0,
+        "longitude": -71.054774,
+        "municipality": "Boston",
+        "name": "Summer St @ South Station - Red Line entrance",
+        "on_street": "Summer Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "6564",
+      "links": {
+        "self": "/stops/6564"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=6564"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Verchild Street",
+        "description": null,
+        "latitude": 42.233339,
+        "location_type": 0,
+        "longitude": -71.005958,
+        "municipality": "Quincy",
+        "name": "Independence Ave @ Verchild St",
+        "on_street": "Independence Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "3946",
+      "links": {
+        "self": "/stops/3946"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=3946"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Holyoke Street",
+        "description": null,
+        "latitude": 42.373111,
+        "location_type": 0,
+        "longitude": -71.117653,
+        "municipality": "Cambridge",
+        "name": "Massachusetts Ave opp Holyoke St",
+        "on_street": "Massachusetts Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "110",
+      "links": {
+        "self": "/stops/110"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=110"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Washington Street",
+        "description": "Downtown Crossing - Red Line Shuttle - Franklin St @ Washington St",
+        "latitude": 42.35627,
+        "location_type": 0,
+        "longitude": -71.05933,
+        "municipality": "Boston",
+        "name": "Downtown Crossing - Franklin St @ Washington St",
+        "on_street": "Franklin Street",
+        "platform_code": null,
+        "platform_name": "Red Line Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9070080",
+      "links": {
+        "self": "/stops/9070080"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9070080"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Dorchester Avenue",
+        "description": null,
+        "latitude": 42.342664,
+        "location_type": 0,
+        "longitude": -71.056949,
+        "municipality": "Boston",
+        "name": "W Broadway @ Broadway Station",
+        "on_street": "West Broadway",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "151",
+      "links": {
+        "self": "/stops/151"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=151"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": null,
+        "description": "Charles/MGH - Red Line Alewife Shuttle - 325 Cambridge St",
+        "latitude": 42.361245,
+        "location_type": 0,
+        "longitude": -71.069722,
+        "municipality": "Boston",
+        "name": "Charles/MGH - 325 Cambridge St",
+        "on_street": "Cambridge Street",
+        "platform_code": null,
+        "platform_name": "Alewife Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9070074",
+      "links": {
+        "self": "/stops/9070074"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9070074"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": null
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Green Street",
+        "description": null,
+        "latitude": 42.365072,
+        "location_type": 0,
+        "longitude": -71.105142,
+        "municipality": "Cambridge",
+        "name": "River St @ Green St",
+        "on_street": "River Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "1059",
+      "links": {
+        "self": "/stops/1059"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=1059"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Pearl Street",
+        "description": null,
+        "latitude": 42.364128,
+        "location_type": 0,
+        "longitude": -71.103034,
+        "municipality": "Cambridge",
+        "name": "Green St @ Pearl St",
+        "on_street": "Green Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "2755",
+      "links": {
+        "self": "/stops/2755"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=2755"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Saville St",
+        "description": "Quincy Center - Red Line North Quincy/Braintree Shuttle - Burgin Pkwy @ Saville St",
+        "latitude": 42.25093,
+        "location_type": 0,
+        "longitude": -71.0054,
+        "municipality": "Quincy",
+        "name": "Quincy Center - Opp Burgin Pkwy @ Saville St",
+        "on_street": "Burgin Pkwy",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9370048",
+      "links": {
+        "self": "/stops/9370048"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9370048"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Atlantic Avenue",
+        "description": null,
+        "latitude": 42.352649,
+        "location_type": 0,
+        "longitude": -71.055136,
+        "municipality": "Boston",
+        "name": "Summer St @ Atlantic Ave",
+        "on_street": "Summer Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "892",
+      "links": {
+        "self": "/stops/892"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=892"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Summer Street",
+        "description": null,
+        "latitude": 42.354271,
+        "location_type": 0,
+        "longitude": -71.059508,
+        "municipality": "Boston",
+        "name": "Chauncy St @ Summer St",
+        "on_street": "Chauncey Street",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "16538",
+      "links": {
+        "self": "/stops/16538"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=16538"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Brook Street",
+        "description": "Wollaston - Red Line Alewife Shuttle - Newport Ave opp Brook St",
+        "latitude": 42.266771,
+        "location_type": 0,
+        "longitude": -71.020771,
+        "municipality": "Quincy",
+        "name": "Wollaston - Newport Ave opp Brook St",
+        "on_street": "Newport Avenue",
+        "platform_code": null,
+        "platform_name": "Alewife Shuttle",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "9170100",
+      "links": {
+        "self": "/stops/9170100"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=9170100"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Atlantic Avenue",
+        "description": "Essex St @ Atlantic Ave - Silver Line - SL4 Nubian",
+        "latitude": 42.35176,
+        "location_type": 0,
+        "longitude": -71.056003,
+        "municipality": "Boston",
+        "name": "Essex St @ Atlantic Ave",
+        "on_street": "Essex Street",
+        "platform_code": null,
+        "platform_name": "Nubian",
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "6538",
+      "links": {
+        "self": "/stops/6538"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=6538"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "address": null,
+        "at_street": "Garden Street",
+        "description": null,
+        "latitude": 42.375302,
+        "location_type": 0,
+        "longitude": -71.119237,
+        "municipality": "Cambridge",
+        "name": "Harvard Sq @ Garden St - Dawes Island",
+        "on_street": "Massachusetts Avenue",
+        "platform_code": null,
+        "platform_name": null,
+        "vehicle_type": 3,
+        "wheelchair_boarding": 1
+      },
+      "id": "22549",
+      "links": {
+        "self": "/stops/22549"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=22549"
+          }
+        },
+        "parent_station": {
+          "data": null
+        },
+        "zone": {
+          "data": {
+            "id": "LocalBus",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  }
+}

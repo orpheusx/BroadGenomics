@@ -1,0 +1,207 @@
+{
+  "data": [
+    {
+      "attributes": {
+        "long_name": "Red Line",
+        "type": 1
+      },
+      "id": "Red",
+      "links": {
+        "self": "/routes/Red"
+      },
+      "relationships": {
+        "agency": {
+          "data": {
+            "id": "1",
+            "type": "agency"
+          }
+        },
+        "line": {
+          "data": {
+            "id": "line-Red",
+            "type": "line"
+          }
+        }
+      },
+      "type": "route"
+    },
+    {
+      "attributes": {
+        "long_name": "Mattapan Trolley",
+        "type": 0
+      },
+      "id": "Mattapan",
+      "links": {
+        "self": "/routes/Mattapan"
+      },
+      "relationships": {
+        "agency": {
+          "data": {
+            "id": "1",
+            "type": "agency"
+          }
+        },
+        "line": {
+          "data": {
+            "id": "line-Mattapan",
+            "type": "line"
+          }
+        }
+      },
+      "type": "route"
+    },
+    {
+      "attributes": {
+        "long_name": "Orange Line",
+        "type": 1
+      },
+      "id": "Orange",
+      "links": {
+        "self": "/routes/Orange"
+      },
+      "relationships": {
+        "agency": {
+          "data": {
+            "id": "1",
+            "type": "agency"
+          }
+        },
+        "line": {
+          "data": {
+            "id": "line-Orange",
+            "type": "line"
+          }
+        }
+      },
+      "type": "route"
+    },
+    {
+      "attributes": {
+        "long_name": "Green Line B",
+        "type": 0
+      },
+      "id": "Green-B",
+      "links": {
+        "self": "/routes/Green-B"
+      },
+      "relationships": {
+        "agency": {
+          "data": {
+            "id": "1",
+            "type": "agency"
+          }
+        },
+        "line": {
+          "data": {
+            "id": "line-Green",
+            "type": "line"
+          }
+        }
+      },
+      "type": "route"
+    },
+    {
+      "attributes": {
+        "long_name": "Green Line C",
+        "type": 0
+      },
+      "id": "Green-C",
+      "links": {
+        "self": "/routes/Green-C"
+      },
+      "relationships": {
+        "agency": {
+          "data": {
+            "id": "1",
+            "type": "agency"
+          }
+        },
+        "line": {
+          "data": {
+            "id": "line-Green",
+            "type": "line"
+          }
+        }
+      },
+      "type": "route"
+    },
+    {
+      "attributes": {
+        "long_name": "Green Line D",
+        "type": 0
+      },
+      "id": "Green-D",
+      "links": {
+        "self": "/routes/Green-D"
+      },
+      "relationships": {
+        "agency": {
+          "data": {
+            "id": "1",
+            "type": "agency"
+          }
+        },
+        "line": {
+          "data": {
+            "id": "line-Green",
+            "type": "line"
+          }
+        }
+      },
+      "type": "route"
+    },
+    {
+      "attributes": {
+        "long_name": "Green Line E",
+        "type": 0
+      },
+      "id": "Green-E",
+      "links": {
+        "self": "/routes/Green-E"
+      },
+      "relationships": {
+        "agency": {
+          "data": {
+            "id": "1",
+            "type": "agency"
+          }
+        },
+        "line": {
+          "data": {
+            "id": "line-Green",
+            "type": "line"
+          }
+        }
+      },
+      "type": "route"
+    },
+    {
+      "attributes": {
+        "long_name": "Blue Line",
+        "type": 1
+      },
+      "id": "Blue",
+      "links": {
+        "self": "/routes/Blue"
+      },
+      "relationships": {
+        "agency": {
+          "data": {
+            "id": "1",
+            "type": "agency"
+          }
+        },
+        "line": {
+          "data": {
+            "id": "line-Blue",
+            "type": "line"
+          }
+        }
+      },
+      "type": "route"
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  }
+}
