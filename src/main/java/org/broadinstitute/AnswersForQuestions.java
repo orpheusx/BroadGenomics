@@ -3,6 +3,7 @@ package org.broadinstitute;
 import java.util.*;
 
 import static java.lang.System.out;
+import static java.lang.Thread.sleep;
 
 /**
  * An implementation that provides answers to three questions using the MBTA API.
@@ -130,6 +131,7 @@ public class AnswersForQuestions {
 
     /**
      * Execute all three questions.
+     * The sleep() calls are a poor way to deal with rate limiting.
      * @param args no arguments are expected.
      */
     public static void main(String[] args) throws InterruptedException {
@@ -140,7 +142,7 @@ public class AnswersForQuestions {
         routes.forEach(route -> {
             out.println(route.attributes().long_name() + ": " + route.id()); // Might add a check for null and print error message
         });
-        Thread.sleep(1000);
+        sleep(1000);
 
         StopInfo stopInfo = answer.questionTwo();
         out.println("\nQuestion 2:");
@@ -154,11 +156,11 @@ public class AnswersForQuestions {
             }
         }
 
-        Thread.sleep(1000);
+        sleep(1000);
         out.println("\nQuestion 3:");
         Journey davisToKendall = answer.questionThree("Davis", "Kendall/MIT");
         out.println("\t" + davisToKendall);
-        Thread.sleep(5000);
+        sleep(5000);
         Journey ashmontToArlington = answer.questionThree("Ashmont", "Arlington");
         out.println("\t" + ashmontToArlington);
     }
