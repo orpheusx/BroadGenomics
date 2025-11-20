@@ -4,20 +4,12 @@ import java.util.*;
 
 /**
  * An implementation that provides answers to three questions using the MBTA API.
- *
+ * Results are written to stdout.
  */
 public class AnswersForQuestions {
 
-    static final String MBTA_ROUTES_MIN        = "https://api-v3.mbta.com/routes?fields[route]=long_name,type&filter[type]=0,1";
-//    static final String MBTA_ROUTES_WITH_STOPS = "https://api-v3.mbta.com/routes?fields[route]=long_name,type&filter[type]=0,1&filter[stop]&include=stop";
-    static final String MBTA_ROUTES_WITH_STOPS = "https://api-v3.mbta.com/routes?fields[route]=long_name,type&filter[type]=0,1&include=stop&filter[stop]=place-cntsq";
-    //    static final String MBTA_ROUTES_WITH_STOPS = "https://api-v3.mbta.com/routes?fields[route]=long_name,type&include=stop&filter[stop]";
-
-//    static final String MBTA_ROUTES = "https://api-v3.mbta.com/stops?filter[route]=Red";
-    static final String STOPS_BY_ROUTE = "https://api-v3.mbta.com/stops?include=route&filter[route]="; // append the id of the route
-
     private List<Route> routes;
-    private Map<Route, List<Stop>> stopsByRoute = new HashMap<>();
+    private final Map<String, Set<String>> routesByStopName = new HashMap<>();
 
     /**
      * Provides: '... a program that retrieves data representing all, what we'll call "subway" routes: "Light Rail" (type
@@ -25,9 +17,9 @@ public class AnswersForQuestions {
      */
     public void questionOne() {
         routes = APIClient.fetchAllRoutes();
-        System.out.println("Question One:");
+        System.out.println("\nQuestion 1:");
         routes.forEach(route -> {
-            System.out.println(route.attributes().long_name() + " (id: " + route.id() + ")"); // Might add a check for null and print error message
+            System.out.println(route.attributes().long_name() + ": " + route.id()); // Might add a check for null and print error message
         });
 
     }
@@ -49,11 +41,8 @@ public class AnswersForQuestions {
         int maxStops = 0;
         int minStops = 0;
 
-        Map<String, Set<String>> routesByStopName = new HashMap<>();
-
         for (Route route : routes) {
             final List<Stop> routeStops = APIClient.fetchStopsForRoute(route.id());
-            stopsByRoute.put(route, routeStops); // for use in questionThree
 
             if (mostStops == null || routeStops.size() > maxStops) {
                 mostStops = route;
@@ -64,84 +53,97 @@ public class AnswersForQuestions {
                 minStops = routeStops.size();
             }
             for (Stop stop : routeStops) {
-                Set<String> names = routesByStopName.get(stop.attributes().name());
-                if (names == null) {
-                    names = new HashSet<>();
-                    routesByStopName.put(stop.attributes().name(), names);
-                }
+                Set<String> names = routesByStopName.computeIfAbsent(stop.attributes().name(), k -> new HashSet<>());
                 names.add(route.attributes().long_name());
-
             }
         }
 
-        // FIXME solve the tie between Green-E and Green-D
-        System.out.println("Most stops: " + mostStops.id() + ": " + maxStops);
-        System.out.println("Least stops: " + leastStops.id() + ": " + minStops);
+        System.out.println("\nQuestion 2:");
 
-        System.out.println("Connected Stop: ");
+        // TODO solve the tie between Green-E and Green-D.
+        System.out.println("Most stops: " + mostStops.attributes().long_name() + ": " + maxStops);
+        System.out.println("Least stops: " + leastStops.attributes().long_name() + ": " + minStops);
+
+        System.out.println("Connecting Stops: ");
         for (Map.Entry<String, Set<String>> entry : routesByStopName.entrySet()) {
             if (entry.getValue().size() > 1) {
-                System.out.println(entry.getKey() + ": " + entry.getValue());
+                System.out.println("\t" + entry.getKey() + ": " + entry.getValue());
             }
         }
     }
 
     /**
      * Provides:
-     * "[a] program [...] such that the user can provide any two stops on the subway routes you
+     * [a] program [...] such that the user can provide any two stops on the subway routes you
      * listed for question 1.
-     * "List a rail route you could travel to get from one stop to the other. We will not evaluate your solution
+     * List a rail route you could travel to get from one stop to the other. We will not evaluate your solution
      * based upon the efficiency or cleverness of your route-finding solution. Pick a simple solution that
      * answers the question. We will want you to understand and be able to explain how your algorithm
      * performs.
-     * "Examples:
+     * Examples:
      * 1. Davis to Kendall/MIT -> Red Line
-     * 2. Ashmont to Arlington -> Red Line, Green Line B"
+     * 2. Ashmont to Arlington -> Red Line, Green Line B
      * <p>
      * NB: The /stops API provides a "connecting_stops" relationship that sounded useful in the context of this question.
      * These appear to be only bus connections, however.
-     * NB: Note that route can only be included if filter[route] is present and has exactly one /data/{index}/relationships/route/data/id.
-     * This would seem to require separate calls to fetch the stops for each route.
      */
     public void questionThree(String stopId1, String stopId2) {
+        // TODO validate input?
+        System.out.println("\nQuestion 3:");
 
+        final Set<String> routes1 = routesByStopName.get(stopId1);
+        final Set<String> routes2 = routesByStopName.get(stopId2);
+
+        // Is there a route in common between the two lists?
+        for (String route : routes1) {
+            if (routes2.contains(route)) {
+                // ah, cool! they're both on the same route
+                found(stopId1, stopId2, List.of(route));
+                return;
+            }
+        }
+
+        // Is there a different stop that has one of the routes in both stops in common?
+        for (Map.Entry<String, Set<String>> entry : routesByStopName.entrySet()) {
+            String stopName = entry.getKey();
+            Set<String> routesAtStop = entry.getValue();
+            if (routesAtStop.size() > 1) { // only check stops that join 2+ routes
+                String match1 = intersection(routesAtStop, routes1);
+                String match2 = intersection(routesAtStop, routes2);
+                if (match1 != null && match2 != null) {
+                    found(stopId1, stopId2, List.of(match1, match2));
+                    System.out.println("\tConnecting stop: " + stopName);
+                    return;
+                }
+            }
+        }
+        System.out.println("Hmm, didn't find a solution.");
     }
 
+    private String intersection(Set<String> setA, Set<String> setB) {
+        for (String a : setA) {
+            if (setB.contains(a)) {
+                return a;
+            }
+        }
+        return null;
+    }
+
+    private void found(String stopId1, String stopId2, List<String> commonRoute) {
+        System.out.println("\t" + stopId1 + " to " + stopId2 + " -> " + commonRoute);
+    }
+
+    /**
+     * Execute all three questions.
+     * NB: Some of the data structures are reused between question methods.
+     * @param args no arguments are expected.
+     */
     public static void main(String[] args) {
         AnswersForQuestions answer = new AnswersForQuestions();
         answer.questionOne();
         answer.questionTwo();
+        answer.questionThree("Davis", "Kendall/MIT");
+        answer.questionThree("Ashmont", "Arlington");
     }
 
-    record Attributes(String long_name, int type) {}
-
-    record SimpleRoute(Attributes attributes) {
-        /*
-        * {
-        *     "attributes": {
-        *       "long_name": "Red Line",
-        *       "type": 1
-        * },
-        *     "id": "Red",
-        *     "links": {
-        *       "self": "/routes/Red"
-        *      },
-        *     "relationships": {
-        *       "agency": {
-        *         "data": {
-        *             "id": "1",
-        *                     "type": "agency"
-        *         }
-        *     },
-        *     "line": {
-        *         "data": {
-        *             "id": "line-Red",
-        *                     "type": "line"
-        *         }
-        *     }
-        * },
-        *     "type": "route"
-        * }
-        */
-    }
 }

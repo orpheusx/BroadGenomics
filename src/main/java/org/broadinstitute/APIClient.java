@@ -15,15 +15,18 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
 
-//TODO move the URLS here.
-import static org.broadinstitute.AnswersForQuestions.MBTA_ROUTES_MIN;
-import static org.broadinstitute.AnswersForQuestions.STOPS_BY_ROUTE;
-
+/**
+ * Encapsulates the functionality required to call the MBTA APIs and marshall the response JSON into simple immutable records.
+ * Doesn't handle retry logic or API keys.
+ */
 public class APIClient {
 
     private static final Logger LOG = LoggerFactory.getLogger(APIClient.class);
 
-    // NB: Both of these are thread-safe which allows us to implement this as a straight function
+    static final String MBTA_ROUTES_MIN = "https://api-v3.mbta.com/routes?fields[route]=long_name,type&filter[type]=0,1";
+    static final String STOPS_BY_ROUTE = "https://api-v3.mbta.com/stops?include=route&filter[route]="; // append the id of the route
+
+    // NB: Both of these are thread-safe which allows us to implement this class as a set of functions
     private static final HttpClient client = HttpClient.newHttpClient();
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
@@ -40,7 +43,7 @@ public class APIClient {
     }
 
     // Convenience version.
-    public static String fetch(String endpoint) {
+    private static String fetch(String endpoint) {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(endpoint))
                 .GET()
@@ -50,7 +53,7 @@ public class APIClient {
     }
 
     // Prefer this method to enable reuse of HttpRequest objects.
-    public static String fetch(HttpRequest request) {
+    private static String fetch(HttpRequest request) {
         try {
             // The range of 4xx errors could suggest to the caller how failures should be handled.
             // e.g. for 429 the caller might want to simply wait for a period before retrying whereas
@@ -83,8 +86,7 @@ public class APIClient {
             };
         } catch (IOException | InterruptedException e) {
             LOG.error("fetch failed: {}", e.getMessage());
-            return null; // Optional instead?
+            return null;
         }
     }
-
 }
