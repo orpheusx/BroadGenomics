@@ -74,8 +74,12 @@ public class APIClient {
                         yield new String(response.body(), StandardCharsets.UTF_8);
                     }
                 }
-                case 400, 403, 429 -> {
-                    LOG.error("Got {} for request, {}", response.statusCode(), request.uri());
+                case 400, 403 -> {
+                    LOG.error("Got non-retryable {} for request, {}", response.statusCode(), request.uri());
+                    yield null;
+                }
+                case 429 -> {
+                    LOG.error("Throttling signalled by HTTP 429 for request, {}", request.uri());
                     yield null;
                 }
                 default-> {

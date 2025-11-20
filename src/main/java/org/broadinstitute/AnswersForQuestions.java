@@ -2,26 +2,22 @@ package org.broadinstitute;
 
 import java.util.*;
 
+import static java.lang.System.out;
+
 /**
  * An implementation that provides answers to three questions using the MBTA API.
  * Results are written to stdout.
  */
 public class AnswersForQuestions {
 
-    private List<Route> routes;
-    private final Map<String, Set<String>> routesByStopName = new HashMap<>();
+    public static String NO_CONNECTING_STOP = "None";
 
     /**
      * Provides: '... a program that retrieves data representing all, what we'll call "subway" routes: "Light Rail" (type
      * 0) and “Heavy Rail” (type 1). The program should list their “long names” on the console.'
      */
-    public void questionOne() {
-        routes = APIClient.fetchAllRoutes();
-        System.out.println("\nQuestion 1:");
-        routes.forEach(route -> {
-            System.out.println(route.attributes().long_name() + ": " + route.id()); // Might add a check for null and print error message
-        });
-
+    public List<Route> questionOne() {
+        return APIClient.fetchAllRoutes();
     }
 
     /**
@@ -35,13 +31,14 @@ public class AnswersForQuestions {
      *  of a single route. So it's not usable for discovery purposes. We'll use the list of routes produced in questionOne to fetch the stop
      *  information for each of them.
      */
-    public void questionTwo() {
+    public StopInfo questionTwo() {
         Route mostStops = null;
         Route leastStops = null;
         int maxStops = 0;
         int minStops = 0;
 
-        for (Route route : routes) {
+        Map<String, Set<String>> routesByStopName = new HashMap<>();
+        for (Route route : APIClient.fetchAllRoutes()) {
             final List<Stop> routeStops = APIClient.fetchStopsForRoute(route.id());
 
             if (mostStops == null || routeStops.size() > maxStops) {
@@ -58,18 +55,23 @@ public class AnswersForQuestions {
             }
         }
 
-        System.out.println("\nQuestion 2:");
+        return new StopInfo(mostStops, maxStops, leastStops, minStops, routesByStopName);
+    }
 
-        // TODO solve the tie between Green-E and Green-D.
-        System.out.println("Most stops: " + mostStops.attributes().long_name() + ": " + maxStops);
-        System.out.println("Least stops: " + leastStops.attributes().long_name() + ": " + minStops);
+    private Map<String, Set<String>> constructRoutesByStopName() {
+        Map<String, Set<String>> routesByStopName = new HashMap<>();
+        final List<Route> routes = APIClient.fetchAllRoutes();
+        if (routes == null) {
 
-        System.out.println("Connecting Stops: ");
-        for (Map.Entry<String, Set<String>> entry : routesByStopName.entrySet()) {
-            if (entry.getValue().size() > 1) {
-                System.out.println("\t" + entry.getKey() + ": " + entry.getValue());
+        }
+        for (Route route : routes) {
+            final List<Stop> routeStops = APIClient.fetchStopsForRoute(route.id());
+            for (Stop stop : routeStops) {
+                Set<String> names = routesByStopName.computeIfAbsent(stop.attributes().name(), k -> new HashSet<>());
+                names.add(route.attributes().long_name());
             }
         }
+        return routesByStopName;
     }
 
     /**
@@ -87,10 +89,10 @@ public class AnswersForQuestions {
      * NB: The /stops API provides a "connecting_stops" relationship that sounded useful in the context of this question.
      * These appear to be only bus connections, however.
      */
-    public void questionThree(String stopId1, String stopId2) {
+    public Journey questionThree(String stopId1, String stopId2) {
         // TODO validate input?
-        System.out.println("\nQuestion 3:");
 
+        Map<String, Set<String>> routesByStopName = constructRoutesByStopName();
         final Set<String> routes1 = routesByStopName.get(stopId1);
         final Set<String> routes2 = routesByStopName.get(stopId2);
 
@@ -98,8 +100,7 @@ public class AnswersForQuestions {
         for (String route : routes1) {
             if (routes2.contains(route)) {
                 // ah, cool! they're both on the same route
-                found(stopId1, stopId2, List.of(route));
-                return;
+                return new Journey(stopId1, stopId2, List.of(route), NO_CONNECTING_STOP);
             }
         }
 
@@ -111,13 +112,11 @@ public class AnswersForQuestions {
                 String match1 = intersection(routesAtStop, routes1);
                 String match2 = intersection(routesAtStop, routes2);
                 if (match1 != null && match2 != null) {
-                    found(stopId1, stopId2, List.of(match1, match2));
-                    System.out.println("\tConnecting stop: " + stopName);
-                    return;
+                    return new Journey(stopId1, stopId2, List.of(match1, match2), stopName);
                 }
             }
         }
-        System.out.println("Hmm, didn't find a solution.");
+        return null;
     }
 
     private String intersection(Set<String> setA, Set<String> setB) {
@@ -129,21 +128,39 @@ public class AnswersForQuestions {
         return null;
     }
 
-    private void found(String stopId1, String stopId2, List<String> commonRoute) {
-        System.out.println("\t" + stopId1 + " to " + stopId2 + " -> " + commonRoute);
-    }
-
     /**
      * Execute all three questions.
-     * NB: Some of the data structures are reused between question methods.
      * @param args no arguments are expected.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         AnswersForQuestions answer = new AnswersForQuestions();
-        answer.questionOne();
-        answer.questionTwo();
-        answer.questionThree("Davis", "Kendall/MIT");
-        answer.questionThree("Ashmont", "Arlington");
+
+        final List<Route> routes = answer.questionOne();
+        out.println("\nQuestion 1:");
+        routes.forEach(route -> {
+            out.println(route.attributes().long_name() + ": " + route.id()); // Might add a check for null and print error message
+        });
+        Thread.sleep(1000);
+
+        StopInfo stopInfo = answer.questionTwo();
+        out.println("\nQuestion 2:");
+        // TODO solve the tie between Green-E and Green-D.
+        out.println("Most stops: " + Objects.requireNonNull(stopInfo.mostStops()).attributes().long_name() + ": " + stopInfo.maxStops());
+        out.println("Least stops: " + stopInfo.leastStops().attributes().long_name() + ": " + stopInfo.minStops());
+        out.println("Connecting Stops: ");
+        for (Map.Entry<String, Set<String>> entry : stopInfo.routesByStopName().entrySet()) {
+            if (entry.getValue().size() > 1) {
+                out.println("\t" + entry.getKey() + ": " + entry.getValue());
+            }
+        }
+
+        Thread.sleep(1000);
+        out.println("\nQuestion 3:");
+        Journey davisToKendall = answer.questionThree("Davis", "Kendall/MIT");
+        out.println("\t" + davisToKendall);
+        Thread.sleep(5000);
+        Journey ashmontToArlington = answer.questionThree("Ashmont", "Arlington");
+        out.println("\t" + ashmontToArlington);
     }
 
 }

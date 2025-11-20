@@ -5,10 +5,20 @@ I targeted Java 23 for both source code and binary format. Later versions should
 
 The build command is: `mvn clean package`
 
-To run the program: `java -jar ./target/BroadGenomics-1.0-SNAPSHOT-jar-with-dependencies.jar`
+To skip running unit tests: `mvn clean package -DskipTests=true`
 
-As discussed in some of the test class comments the testability of the AnswersForQuestions program is not great.
-This is partly influenced by the requirement that the output be printed to the console. 
-With a bit more time, I could refactor the question methods to return structures (instead of void) that have the needed data and 
-then write some helper methods that write them to the console. If the requirements were
-to be expanded this might be needed anyway.
+If you prefer to just run the unit tests: `mvn test`
+
+Note that I haven't integrated an API key so you may (read will likely) see throttling. The logging will make it clear
+when this happens.
+
+To avoid this you can run specific unit tests e.g : 
+    `mvn test -Dtest=AnswersForQuestionsTest#questionOne`
+
+You can also run each of the unit test classes separately:
+    `mvn test -Dtest=APIClientTest`
+
+To run the main program: `java -jar ./target/BroadGenomics-1.0-SNAPSHOT-jar-with-dependencies.jar`
+
+No doubt there's something I've forgotten :(
+ 
