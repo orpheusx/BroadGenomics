@@ -29,6 +29,7 @@ public class APIClient {
     // NB: Both of these are thread-safe which allows us to implement this class as a set of functions
     private static final HttpClient client = HttpClient.newHttpClient();
     private static final ObjectMapper objectMapper = new ObjectMapper();
+    private static final String API_KEY = System.getenv("MBTA_API_KEY");
 
     public static List<Route> fetchAllRoutes() {
         String json = fetch(MBTA_ROUTES_MIN);
@@ -44,12 +45,15 @@ public class APIClient {
 
     // Convenience version.
     private static String fetch(String endpoint) {
-        HttpRequest request = HttpRequest.newBuilder()
+        HttpRequest.Builder builder = HttpRequest.newBuilder()
                 .uri(URI.create(endpoint))
                 .GET()
-                .header("Accept-Encoding", "gzip") // prefer gzip compression
-                .build();
-        return fetch(request);
+                .header("Accept-Encoding", "gzip"); // prefer gzip compression
+        if(API_KEY!=null) { // Use an API key if one is available from the caller's env.
+            LOG.debug("Using x-api-key...");
+            builder.header("x-api-key", API_KEY);
+        }
+        return fetch(builder.build());
     }
 
     // Prefer this method to enable reuse of HttpRequest objects.

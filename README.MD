@@ -9,10 +9,13 @@ To skip running unit tests: `mvn clean package -DskipTests=true`
 
 If you prefer to just run the unit tests: `mvn test`
 
-Note that I haven't integrated an API key so you may (read will likely) see throttling. The logging will make it clear
-when this happens.
+~~Note that I haven't integrated an API key so you may (read will likely) see throttling. The logging will make it clear
+when this happens.~~ I've added API key support. To use it set your API key as an environment variable called MBTA_API_KEY.
+For example:
 
-To avoid this you can run specific unit tests e.g : 
+`export MBTA_API_KEY="c02fd4d6a3d242bb8d3576b3eb5fd5cc"`
+
+If you'd prefer to skip this you can run specific unit tests e.g : 
     `mvn test -Dtest=AnswersForQuestionsTest#questionOne`
 
 You can also run each of the unit test classes separately:
