@@ -137,6 +137,11 @@ public class AnswersForQuestions {
     public static void main(String[] args) throws InterruptedException {
         AnswersForQuestions answer = new AnswersForQuestions();
 
+        if (args.length != 2) {
+            out.println("Two (and only two) stops must be specified to calculate the route for question #3.");
+            return;
+        }
+
         final List<Route> routes = answer.questionOne();
         out.println("\nQuestion 1:");
         routes.forEach(route -> {
@@ -155,14 +160,17 @@ public class AnswersForQuestions {
                 out.println("\t" + entry.getKey() + ": " + entry.getValue());
             }
         }
+//
+//        sleep(1000);
+//        out.println("\nQuestion 3:");
+//        Journey davisToKendall = answer.questionThree("Davis", "Kendall/MIT");
+//        out.println("\t" + davisToKendall);
+//        sleep(5000);
+//        Journey ashmontToArlington = answer.questionThree("Ashmont", "Arlington");
+//        out.println("\t" + ashmontToArlington);
 
-        sleep(1000);
-        out.println("\nQuestion 3:");
-        Journey davisToKendall = answer.questionThree("Davis", "Kendall/MIT");
-        out.println("\t" + davisToKendall);
-        sleep(5000);
-        Journey ashmontToArlington = answer.questionThree("Ashmont", "Arlington");
-        out.println("\t" + ashmontToArlington);
+        Journey userResponse = answer.questionThree(args[0].trim(), args[1].trim());
+        out.println("\nQuestion 3 solution: " + userResponse);
     }
 
 }

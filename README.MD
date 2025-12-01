@@ -21,7 +21,7 @@ If you'd prefer to skip this you can run specific unit tests e.g :
 You can also run each of the unit test classes separately:
     `mvn test -Dtest=APIClientTest`
 
-To run the main program: `java -jar ./target/BroadGenomics-1.0-SNAPSHOT-jar-with-dependencies.jar`
+To run the main program: `java -jar ./target/BroadGenomics-1.0-SNAPSHOT-jar-with-dependencies.jar <name-of-stop1> <name-of-stop2>`
 
 No doubt there's something I've forgotten :(
  
